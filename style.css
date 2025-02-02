@@ -19,6 +19,7 @@ html {
 }
 
 /*   *** Reusable Code Starts ***   */
+
 button.btn {
   background-color: var(--primary-clr);
   color: var(--bg-clr-one);
@@ -346,6 +347,17 @@ button.contact-btn {
 .about-desc .download-btn {
   border-radius: 25px;
   margin-top: 25px;
+  box-shadow: 0px 20px 24px 3px rgba(5, 85, 92, 0.2);
+}
+
+button.download-btn a {
+  color: var(--bg-clr-one);
+  text-decoration: none;
+}
+
+button.download-btn:hover a {
+  color: var(--primary-clr);
+  text-decoration: none;
 }
 /*   *** About Section Styling Ends ***   */
 
@@ -765,7 +777,7 @@ button.contact-btn {
   font-size: 18px;
   padding: 2px 0px;
   background-color: var(--bg-clr-one);
-  color: var(--primary-clr);
+  color: var (--primary-clr);
   border: none;
   border-bottom: 1px solid var(--text-clr);
   outline: none;
@@ -886,7 +898,7 @@ button.contact-btn {
 }
 .footer-contents p {
   font-size: 16px;
-  color: var(--text-clr);
+  color: var (--text-clr);
 }
 .footer-contents p span {
   color: var(--primary-clr);
@@ -916,7 +928,7 @@ html {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: var(--text-clr);
+  background: var(--primary-clr);
   color: var(--bg-clr-one);
   font-size: 20px;
   padding: 15px 20px 15px 20px;
