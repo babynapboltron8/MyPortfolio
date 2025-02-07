@@ -48,6 +48,7 @@ $('.button-group .button').on('click', function () {
     filter: value,
   });
 });
+// Portfolio Section Ends
 
 // magnific popup
 $('.gallery').magnificPopup({
@@ -86,6 +87,7 @@ $('.testimonials-container').owlCarousel({
 });
 // Testimonials Section Ends
 
+// Go Top Button
 const header = document.querySelector('[data-header]');
 const goTopBtn = document.querySelector('[data-go-top]');
 
@@ -98,3 +100,26 @@ window.addEventListener('scroll', function () {
     goTopBtn.classList.remove('active');
   }
 });
+// GO Top Button Ends
+
+// Dark Mode
+let darkmode = localStorage.getItem('darkmode');
+const themeSwitch = document.getElementById('theme-switch');
+
+const enableDarkmode = () => {
+  document.body.classList.add('darkmode');
+  localStorage.setItem('darkmode', 'active');
+};
+
+const disableDarkmode = () => {
+  document.body.classList.remove('darkmode');
+  localStorage.setItem('darkmode', null);
+};
+
+if (darkmode === 'active') enableDarkmode();
+
+themeSwitch.addEventListener('click', () => {
+  darkmode = localStorage.getItem('darkmode');
+  darkmode !== 'active' ? enableDarkmode() : disableDarkmode();
+});
+// Dark Mode Ends
