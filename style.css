@@ -18,6 +18,10 @@ html {
   --secondary-heading: #277b6d;
 }
 
+body {
+  background-color: var(--bg-clr-one);
+}
+
 /*   *** Reusable Code Starts ***   */
 
 button.btn {
@@ -913,20 +917,6 @@ button.download-btn:hover a {
  * #GO TOP
 \*-----------------------------------*/
 
-html {
-  scroll-behavior: smooth;
-
-  /*   *** Storing Colors In Variables ***   */
-  --bg-clr-one: #fffefb;
-  --bg-clr-two: #b17457;
-  --bg-clr-three: #eef1f6;
-  --primary-clr: #313d44;
-  --primary-light-clr: #eeeeee;
-  --links-clr: #313d44;
-  --text-clr: #3f7277;
-  --secondary-heading: #277b6d;
-}
-
 .go-top-btn {
   position: fixed;
   bottom: 20px;
@@ -1120,21 +1110,16 @@ html {
 /*   *** Media Query Ends ***   */
 
 /* Dark Mode */
-:root {
-  --base-color: white;
-  --base-variant: #e8e9ed;
-  --text-color: #111528;
-  --secondary-text: #232738;
-  --primary-color: #3a435d;
-  --accent-color: #0071ff;
-}
 .darkmode {
-  --base-color: #070b1d;
-  --base-variant: #101425;
-  --text-color: #ffffff;
+  --bg-clr-one: #070b1d;
+  --bg-clr-two: #101425;
+  --bg-clr-three: #252627;
+  --links-clr: #ffffff;
   --secondary-text: #a4a5b8;
-  --primary-color: #3a435d;
+  --primary-clr: #3a435d;
+  --primary-light-clr: #2d2929;
   --accent-color: #0071ff;
+  --secondary-heading: #277b6d;
 }
 
 button {
