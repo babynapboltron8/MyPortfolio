@@ -69,6 +69,11 @@ button.btn:hover {
 .button-wrapper a {
   text-decoration: none;
 }
+
+.button-wrapper a:first-child {
+  margin-right: 10px;
+}
+
 /*   *** Reusable Code Ends ***   */
 
 body {
@@ -1145,12 +1150,6 @@ button {
   padding: 0;
   border-radius: 50%;
   background-color: var(--primary-clr);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 20px;
-  right: 20px;
 }
 #theme-switch svg {
   fill: var(--primary-color);
