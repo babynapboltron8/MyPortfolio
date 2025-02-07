@@ -66,12 +66,18 @@ button.btn:hover {
   font-size: 15px;
   color: var(--text-clr);
 }
+
+div.button-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .button-wrapper a {
   text-decoration: none;
 }
 
 .button-wrapper a:first-child {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 /*   *** Reusable Code Ends ***   */
@@ -1145,12 +1151,16 @@ button {
 }
 
 #theme-switch {
-  height: 30px;
-  width: 30px;
+  height: 33px;
+  width: 33px;
   padding: 0;
   border-radius: 50%;
   background-color: var(--primary-clr);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Added to center the icon */
 }
+
 #theme-switch svg {
   fill: var(--primary-color);
 }
