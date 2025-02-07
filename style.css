@@ -16,6 +16,8 @@ html {
   --links-clr: #313d44;
   --text-clr: #3f7277;
   --secondary-heading: #277b6d;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --service-box-p-clr: #3f7277;
 }
 
 body {
@@ -234,7 +236,7 @@ button.contact-btn {
   align-items: center;
   padding: 10px 15px;
   border-radius: 5px;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 12px 0px var(--shadow-color);
 }
 .career-container .career-item .icon {
   display: inline-block;
@@ -418,7 +420,7 @@ button.download-btn:hover a {
   transition: 0.3s;
 }
 .service-box p {
-  color: var(--text-clr);
+  color: var(--service-box-p-clr);
   line-height: 1.3;
   transition: 0.3s;
 }
@@ -675,7 +677,7 @@ button.download-btn:hover a {
 }
 .test-card-body .ratings i {
   font-size: 17px;
-  color: var(--secondary-heading);
+  color: #c0de00;
   cursor: pointer;
 }
 .profile .profile-desc {
@@ -685,7 +687,7 @@ button.download-btn:hover a {
 .profile-desc span:nth-child(1) {
   font-size: 24px;
   font-weight: bold;
-  color: var (--primary-clr);
+  color: var(--secondary-text);
 }
 .profile-desc span:nth-child(2) {
   font-size: 15px;
@@ -1111,15 +1113,18 @@ button.download-btn:hover a {
 
 /* Dark Mode */
 .darkmode {
-  --bg-clr-one: #070b1d;
-  --bg-clr-two: #101425;
-  --bg-clr-three: #252627;
-  --links-clr: #ffffff;
-  --secondary-text: #a4a5b8;
-  --primary-clr: #3a435d;
-  --primary-light-clr: #2d2929;
+  --bg-clr-one: #363636;
+  --bg-clr-two: #183d3d;
+  --bg-clr-three: #5c8374;
+  --links-clr: #21f7fb;
+  --text-clr: #eeeeee;
+  --secondary-text: #0b7a68;
+  --primary-clr: #00999e;
+  --primary-light-clr: #252d31;
   --accent-color: #0071ff;
   --secondary-heading: #277b6d;
+  --shadow-color: rgba(248, 248, 248, 0.15);
+  --service-box-p-clr: #fffefb;
 }
 
 button {
@@ -1139,7 +1144,7 @@ button {
   width: 50px;
   padding: 0;
   border-radius: 50%;
-  background-color: var(--base-variant);
+  background-color: var(--primary-clr);
   display: flex;
   justify-content: center;
   align-items: center;
