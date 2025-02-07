@@ -118,7 +118,8 @@ const disableDarkmode = () => {
 
 if (darkmode === 'active') enableDarkmode();
 
-themeSwitch.addEventListener('click', () => {
+themeSwitch.addEventListener('click', (event) => {
+  event.preventDefault();
   darkmode = localStorage.getItem('darkmode');
   darkmode !== 'active' ? enableDarkmode() : disableDarkmode();
 });
