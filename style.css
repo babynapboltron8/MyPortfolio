@@ -13,7 +13,7 @@ html {
   --bg-clr-three: #eef1f6;
   --primary-clr: #313d44;
   --primary-light-clr: #eeeeee;
-  --links-clr: #313d44;
+  --links-clr: #20646d;
   --text-clr: #3f7277;
   --secondary-heading: #277b6d;
   --shadow-color: rgba(0, 0, 0, 0.15);
@@ -1124,8 +1124,7 @@ button.download-btn:hover a {
 
 /* Dark Mode */
 .darkmode {
-  --bg-clr-one: #363636;
-  --bg-clr-two: #183d3d;
+  --bg-clr-one: #222222;
   --bg-clr-three: #5c8374;
   --links-clr: #21f7fb;
   --text-clr: #eeeeee;
