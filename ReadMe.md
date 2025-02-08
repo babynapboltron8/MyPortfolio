@@ -77,17 +77,17 @@ Update the `scripts` section in your `package.json` to use Nodemon for developme
 }
 ```
 
-### Step 5: Create Contact Form
+### Step 5: Update Contact Form Action
 
-Update your HTML file to include a contact form that sends a POST request to your server:
+Update your HTML file to include the action attribute in the contact form to send a POST request to your server:
 
 ```html
 <!-- filepath: /c:/Users/Nap/MyPortfolio/index.html -->
-<form action="/send" method="post">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send</button>
+<form class="form-1" action="/send" method="post">
+  <!-- ...existing code... -->
+</form>
+<form class="form-2" action="/send" method="post">
+  <!-- ...existing code... -->
 </form>
 ```
 
