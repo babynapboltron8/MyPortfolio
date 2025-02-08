@@ -473,6 +473,35 @@ button.download-btn:hover a {
 .services-container .service-box:hover.service-box h3 {
   color: #e3e3e8;
 }
+.service-box-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+.service-box-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.service-box-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+.service-box-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.service-box-center {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+.service-box-center.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 /*   *** Services Section Styling Ends   */
 
 /*   *** Resume Section Styling Starts   */
@@ -1012,3 +1041,45 @@ button {
   display: block;
 }
 /* Dark Mode Ends */
+
+/* Services Box Scroll-animation starts */
+.service-box {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+.service-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.service-box-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+.service-box-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.service-box-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+.service-box-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.service-box-center {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+.service-box-center.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Services Box Scroll-animation Ends */

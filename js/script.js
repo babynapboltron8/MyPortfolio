@@ -128,3 +128,51 @@ themeSwitch.addEventListener('click', (event) => {
   darkmode !== 'active' ? enableDarkmode() : disableDarkmode();
 });
 // Dark Mode Ends
+
+// Scroll Animation Services Starts
+document.addEventListener('DOMContentLoaded', function () {
+  const serviceBoxes = document.querySelectorAll('.service-box');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  serviceBoxes.forEach((box) => {
+    observer.observe(box);
+  });
+
+  const serviceBoxesLeft = document.querySelectorAll('.service-box-left');
+  const serviceBoxesRight = document.querySelectorAll('.service-box-right');
+  const serviceBoxesCenter = document.querySelectorAll('.service-box-center');
+  const observerLeftRight = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  serviceBoxesLeft.forEach((box) => {
+    observerLeftRight.observe(box);
+  });
+  serviceBoxesRight.forEach((box) => {
+    observerLeftRight.observe(box);
+  });
+  serviceBoxesCenter.forEach((box) => {
+    observerLeftRight.observe(box);
+  });
+});
+// Scroll Animation Services Ends
