@@ -131,7 +131,10 @@ themeSwitch.addEventListener('click', (event) => {
 
 // Scroll Animation Services Starts
 document.addEventListener('DOMContentLoaded', function () {
-  const serviceBoxes = document.querySelectorAll('.service-box');
+  const serviceBoxesLeft = document.querySelectorAll('.service-box-left');
+  const serviceBoxesRight = document.querySelectorAll('.service-box-right');
+  const serviceBoxesCenter = document.querySelectorAll('.service-box-center');
+  const headings = document.querySelectorAll('.headings');
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -145,34 +148,17 @@ document.addEventListener('DOMContentLoaded', function () {
     { threshold: 0.3 }
   );
 
-  serviceBoxes.forEach((box) => {
+  serviceBoxesLeft.forEach((box) => {
     observer.observe(box);
   });
-
-  const serviceBoxesLeft = document.querySelectorAll('.service-box-left');
-  const serviceBoxesRight = document.querySelectorAll('.service-box-right');
-  const serviceBoxesCenter = document.querySelectorAll('.service-box-center');
-  const observerLeftRight = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        } else {
-          entry.target.classList.remove('visible');
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
-
-  serviceBoxesLeft.forEach((box) => {
-    observerLeftRight.observe(box);
-  });
   serviceBoxesRight.forEach((box) => {
-    observerLeftRight.observe(box);
+    observer.observe(box);
   });
   serviceBoxesCenter.forEach((box) => {
-    observerLeftRight.observe(box);
+    observer.observe(box);
+  });
+  headings.forEach((header) => {
+    observer.observe(header);
   });
 });
 // Scroll Animation Services Ends
