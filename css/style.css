@@ -24,6 +24,10 @@ body {
   background-color: var(--bg-clr-one);
 }
 
+body.preload {
+  visibility: hidden;
+}
+
 /*   *** Reusable Code Starts ***   */
 
 button.btn {

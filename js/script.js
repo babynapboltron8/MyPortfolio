@@ -96,6 +96,16 @@ window.addEventListener('scroll', function () {
 let darkmode = localStorage.getItem('darkmode');
 const themeSwitch = document.getElementById('theme-switch');
 
+if (darkmode === 'active') {
+  document.body.classList.add('darkmode');
+  const logo = document.querySelector('.logo img');
+  logo.src = 'images/logo-name-dm.svg';
+  document.body.insertAdjacentHTML(
+    'beforeend',
+    '<div class="cursor-light"></div>'
+  );
+}
+
 const enableDarkmode = () => {
   document.body.classList.add('darkmode');
   localStorage.setItem('darkmode', 'active');
@@ -115,8 +125,6 @@ const disableDarkmode = () => {
   const cursorLight = document.querySelector('.cursor-light');
   if (cursorLight) cursorLight.remove();
 };
-
-if (darkmode === 'active') enableDarkmode();
 
 themeSwitch.addEventListener('click', (event) => {
   event.preventDefault();
@@ -177,6 +185,9 @@ bee.style.transition = 'transform 0.5s ease, opacity 0.5s ease'; // Add transiti
 bee.style.opacity = '0'; // Initially hidden
 bee.style.bottom = '-50px'; // Start from below the view
 document.querySelector('.home').appendChild(bee); // Append to hero section
+document.addEventListener('DOMContentLoaded', function () {
+  document.body.classList.remove('preload');
+});
 
 function positionBee() {
   const homeSection = document.querySelector('.home');
