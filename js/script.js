@@ -204,6 +204,7 @@ window.addEventListener('load', () => {
     bee.style.opacity = '1'; // Make bee visible after 1.7 seconds
     bee.style.bottom = 'auto'; // Reset bottom to auto
     setTimeout(wiggleBee, 1000); // Start wiggling after 1 second of appearing
+    setInterval(wiggleBee, 3000); // Wiggle every 3 seconds
   }, 1700);
 });
 
