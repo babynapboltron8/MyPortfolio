@@ -1,0 +1,20 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "To make your contact form interactive and able to receive messages, follow these steps:",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
