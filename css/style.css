@@ -907,6 +907,7 @@ button.download-btn:hover a {
 .page-footer .footer-contents {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   text-align-last: center;
 }
 .footer-contents a {
