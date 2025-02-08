@@ -214,7 +214,8 @@ button.contact-btn {
 .hero .hero-text h2 {
   font-size: 22px;
   letter-spacing: 1px;
-  color: var (--primary-clr);
+
+  color: var(--primary-clr);
 }
 .hero .hero-text p {
   max-width: 500px;
