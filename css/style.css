@@ -214,7 +214,7 @@ button.contact-btn {
 .hero .hero-text h2 {
   font-size: 22px;
   letter-spacing: 1px;
-  color: var(--primary-clr);
+  color: var (--primary-clr);
 }
 .hero .hero-text p {
   max-width: 500px;
@@ -1005,6 +1005,11 @@ button.download-btn:hover a {
   }
 }
 
+body.darkmode {
+  cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAALCAYAAACpN+GeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAcdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTLtN+4AAAAZdEVYdFRpdGxlAFBhaW50Lk5FVCB2My4xMC4xNq1pNwAAAAd0SU1FB+YFBhYdGZ9z8XcAAAAZdEVYdENvcHlyaWdodABDb3B5cmlnaHQgMjAwNSBHSU1Qb3J0Lm5ldIAKqAAAACZ0RVh0Q3JlYXRpb24gVGltZQAwNS8wNi8wN+L+gQAAAABJRU5ErkJggg=='),
+    auto;
+}
+
 button {
   border: none;
   padding: 0.8em 2em;
@@ -1095,3 +1100,18 @@ button {
   transform: translateY(0);
 }
 /* Headings Scroll-animation Ends */
+
+/* Cursor Light Starts */
+.cursor-light {
+  position: fixed;
+  width: 80px; /* Increased width */
+  height: 80px; /* Increased height */
+  border-radius: 50%;
+  background: rgba(0, 255, 225, 0.337); /* Slightly more visible */
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6); /* Adjusted shadow */
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: overlay; /* Blend mode to create light effect */
+}
+/* Cursor Light Ends */

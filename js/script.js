@@ -111,6 +111,10 @@ const enableDarkmode = () => {
   localStorage.setItem('darkmode', 'active');
   const logo = document.querySelector('.logo img');
   logo.src = 'images/logo-name-dm.svg';
+  document.body.insertAdjacentHTML(
+    'beforeend',
+    '<div class="cursor-light"></div>'
+  );
 };
 
 const disableDarkmode = () => {
@@ -118,6 +122,8 @@ const disableDarkmode = () => {
   localStorage.setItem('darkmode', null);
   const logo = document.querySelector('.logo img');
   logo.src = 'images/logo-name.svg';
+  const cursorLight = document.querySelector('.cursor-light');
+  if (cursorLight) cursorLight.remove();
 };
 
 if (darkmode === 'active') enableDarkmode();
@@ -126,6 +132,14 @@ themeSwitch.addEventListener('click', (event) => {
   event.preventDefault();
   darkmode = localStorage.getItem('darkmode');
   darkmode !== 'active' ? enableDarkmode() : disableDarkmode();
+});
+
+document.addEventListener('mousemove', (e) => {
+  const cursorLight = document.querySelector('.cursor-light');
+  if (cursorLight) {
+    cursorLight.style.left = `${e.clientX}px`;
+    cursorLight.style.top = `${e.clientY}px`;
+  }
 });
 // Dark Mode Ends
 
