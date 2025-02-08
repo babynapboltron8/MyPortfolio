@@ -925,12 +925,6 @@ button.download-btn:hover a {
   color: var(--primary-clr);
   font-weight: bold;
 }
-
-.footer-contents img {
-  filter: invert(34%) sepia(100%) saturate(0%) hue-rotate(180deg)
-    brightness(96%) contrast(87%);
-  /* Add any other styles applied to the navbar logo */
-}
 /*   *** Footer Section Styling Ends ***   */
 
 /*-----------------------------------*\
@@ -1142,6 +1136,11 @@ button.download-btn:hover a {
   --secondary-heading: #277b6d;
   --shadow-color: rgba(248, 248, 248, 0.15);
   --service-box-p-clr: #fffefb;
+
+  .footer-contents img {
+    filter: invert(34%) sepia(100%) saturate(0%) hue-rotate(180deg)
+      brightness(96%) contrast(87%);
+  }
 }
 
 button {
