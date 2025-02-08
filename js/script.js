@@ -33,7 +33,6 @@ function scrollFunction() {
   }
 }
 // Home Section Ends
-
 // Portfolio Section Starts
 var $galleryContainer = $('.gallery').isotope({
   itemSelector: '.item',
