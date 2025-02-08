@@ -50,16 +50,6 @@ $('.button-group .button').on('click', function () {
 });
 // Portfolio Section Ends
 
-// magnific popup
-$('.gallery').magnificPopup({
-  delegate: '.overlay a',
-  type: 'image',
-  gallery: {
-    enabled: true,
-  },
-});
-// Portfolio Section Ends
-
 // Testimonials Section Starts
 $('.testimonials-container').owlCarousel({
   loop: true,
