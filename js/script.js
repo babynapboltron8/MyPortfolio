@@ -109,11 +109,15 @@ const themeSwitch = document.getElementById('theme-switch');
 const enableDarkmode = () => {
   document.body.classList.add('darkmode');
   localStorage.setItem('darkmode', 'active');
+  const logo = document.querySelector('.logo img');
+  logo.src = 'images/logo-name-dm.svg';
 };
 
 const disableDarkmode = () => {
   document.body.classList.remove('darkmode');
   localStorage.setItem('darkmode', null);
+  const logo = document.querySelector('.logo img');
+  logo.src = 'images/logo-name.svg';
 };
 
 if (darkmode === 'active') enableDarkmode();
