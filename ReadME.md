@@ -13,7 +13,7 @@ Follow these steps to set up and function the contact form using JavaScript, Nod
 2. Install the required packages:
 
    ```bash
-   npm install express body-parser nodemailer
+   npm install express body-parser nodemailer dotenv
    ```
 
 3. Create a new file `server.js` in the root directory and add the following code:
@@ -23,11 +23,21 @@ Follow these steps to set up and function the contact form using JavaScript, Nod
    const express = require('express');
    const bodyParser = require('body-parser');
    const nodemailer = require('nodemailer');
+   const path = require('path');
+   require('dotenv').config();
    const app = express();
    const port = 3000;
 
    app.use(bodyParser.urlencoded({ extended: false }));
    app.use(bodyParser.json());
+
+   // Serve static files from the "public" directory
+   app.use(express.static(path.join(__dirname, 'public')));
+
+   // Serve the Index.html file
+   app.get('/', (req, res) => {
+     res.sendFile(path.join(__dirname, 'Index.html'));
+   });
 
    app.post('/send', (req, res) => {
      const { name, email, message } = req.body;
@@ -35,14 +45,14 @@ Follow these steps to set up and function the contact form using JavaScript, Nod
      const transporter = nodemailer.createTransport({
        service: 'gmail',
        auth: {
-         user: 'your-email@gmail.com',
-         pass: 'your-email-password',
+         user: process.env.EMAIL_USER,
+         pass: process.env.EMAIL_PASS,
        },
      });
 
      const mailOptions = {
        from: email,
-       to: 'your-email@gmail.com',
+       to: process.env.EMAIL_USER,
        subject: `Contact form submission from ${name}`,
        text: message,
      };
@@ -55,12 +65,31 @@ Follow these steps to set up and function the contact form using JavaScript, Nod
      });
    });
 
-   app.listen(port, () => {
-     console.log(`Server is running on http://localhost:${port}`);
-   });
+   app
+     .listen(port, () => {
+       console.log(`Server is running on http://localhost:${port}`);
+     })
+     .on('error', (err) => {
+       if (err.code === 'EADDRINUSE') {
+         console.error(
+           `Port ${port} is already in use. Please use a different port.`
+         );
+       } else {
+         console.error('Server error:', err);
+       }
+     });
    ```
 
-## Step 2: Update the Contact Form
+## Step 2: Create Environment Variables
+
+1. Create a `.env` file in the root of your project and add your email and password:
+
+   ```env
+   EMAIL_USER=your-email@gmail.com
+   EMAIL_PASS=your-email-password
+   ```
+
+## Step 3: Update the Contact Form
 
 1. Update the contact form in your `Index.html` file to include the `action` and `method` attributes:
 
@@ -78,7 +107,9 @@ Follow these steps to set up and function the contact form using JavaScript, Nod
        <label>Email</label>
      </div>
    </form>
+
    <!-- ...existing code... -->
+
    <form class="form-2" action="/send" method="POST">
      <div class="inputGroup">
        <textarea name="message" required="required"></textarea>
@@ -89,7 +120,12 @@ Follow these steps to set up and function the contact form using JavaScript, Nod
    <!-- ...existing code... -->
    ```
 
-## Step 3: Run the Server
+## Step 4: Create the Public Directory
+
+1. Create a `public` directory in the root of your project.
+2. Move your CSS, JS, and image files to the `public` directory.
+
+## Step 5: Run the Server
 
 1. Start the server by running the following command in your terminal:
 
