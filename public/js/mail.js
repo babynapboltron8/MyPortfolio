@@ -1,4 +1,3 @@
-// ! NEEDS TO BE UPDATED TO WORK WITH NODEMAILER
 const contactForm = document.querySelector('.contact-form');
 const fname = document.getElementById('fname');
 const email = document.getElementById('email');
@@ -7,10 +6,15 @@ const message = document.getElementById('message');
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
+  if (!fname.value.trim() || !email.value.trim() || !message.value.trim()) {
+    alert('All fields are required.');
+    return;
+  }
+
   let formData = {
-    fname: fname.value,
-    email: email.value,
-    message: message.value,
+    fname: fname.value.trim(),
+    email: email.value.trim(),
+    message: message.value.trim(),
   };
   console.log(formData);
 
