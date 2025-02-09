@@ -27,7 +27,6 @@ app.post('/send', (req, res) => {
   const mailOptions = {
     from: req.body.email,
     to: 'napboltron@outlook.com',
-    subject: 'New Contact Form Submission',
     text: `Name: ${req.body.fname}\nEmail: ${req.body.email}\nMessage: ${req.body.message}`,
   };
 
