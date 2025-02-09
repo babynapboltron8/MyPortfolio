@@ -31,10 +31,6 @@ app.post('/send', (req, res) => {
     text: `Name: ${req.body.fname}\nEmail: ${req.body.email}\nMessage: ${req.body.message}`,
   };
 
-  app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-  });
-
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
@@ -44,4 +40,8 @@ app.post('/send', (req, res) => {
       res.send('success');
     }
   });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
