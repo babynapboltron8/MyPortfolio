@@ -18,14 +18,15 @@ app.post('/send', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'oYV0v@example.com',
-      pass: 'password',
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
   const mailOptions = {
     from: req.body.email,
     to: 'napboltron@outlook.com',
+    subject: 'New Contact Form Submission',
     text: `Name: ${req.body.fname}\nEmail: ${req.body.email}\nMessage: ${req.body.message}`,
   };
 
