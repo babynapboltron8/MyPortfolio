@@ -1010,11 +1010,6 @@ button.download-btn:hover a {
   }
 }
 
-body.darkmode {
-  cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAALCAYAAACpN+GeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAcdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTLtN+4AAAAZdEVYdFRpdGxlAFBhaW50Lk5FVCB2My4xMC4xNq1pNwAAAAd0SU1FB+YFBhYdGZ9z8XcAAAAZdEVYdENvcHlyaWdodABDb3B5cmlnaHQgMjAwNSBHSU1Qb3J0Lm5ldIAKqAAAACZ0RVh0Q3JlYXRpb24gVGltZQAwNS8wNi8wN+L+gQAAAABJRU5ErkJggg=='),
-    auto;
-}
-
 button {
   border: none;
   padding: 0.8em 2em;
@@ -1035,7 +1030,7 @@ button {
   background-color: var(--primary-clr);
   display: flex;
   justify-content: center;
-  align-items: center; /* Added to center the icon */
+  align-items: center;
 }
 
 #theme-switch svg {
@@ -1109,14 +1104,14 @@ button {
 /* Cursor Light Starts */
 .cursor-light {
   position: fixed;
-  width: 80px; /* Increased width */
-  height: 80px; /* Increased height */
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  background: rgba(0, 255, 225, 0.337); /* Slightly more visible */
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6); /* Adjusted shadow */
+  background: rgba(0, 255, 225, 0.337);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
   pointer-events: none;
   z-index: 10000;
   transform: translate(-50%, -50%);
-  mix-blend-mode: overlay; /* Blend mode to create light effect */
+  mix-blend-mode: overlay;
 }
 /* Cursor Light Ends */

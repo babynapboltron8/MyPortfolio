@@ -132,6 +132,7 @@ themeSwitch.addEventListener('click', (event) => {
   darkmode !== 'active' ? enableDarkmode() : disableDarkmode();
 });
 
+// Cursor Light
 document.addEventListener('mousemove', (e) => {
   const cursorLight = document.querySelector('.cursor-light');
   if (cursorLight) {
@@ -178,13 +179,13 @@ document.addEventListener('DOMContentLoaded', function () {
 // Bee Animation
 const bee = document.createElement('img');
 bee.src = 'images/bee.png';
-bee.style.position = 'absolute'; // Change to absolute position within the hero section
-bee.style.width = '36px'; // Updated size
-bee.style.height = '36px'; // Updated size
-bee.style.transition = 'transform 0.5s ease, opacity 0.5s ease'; // Add transition for smooth movement
-bee.style.opacity = '0'; // Initially hidden
-bee.style.bottom = '-50px'; // Start from below the view
-document.querySelector('.home').appendChild(bee); // Append to hero section
+bee.style.position = 'absolute';
+bee.style.width = '40px';
+bee.style.height = '40px';
+bee.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+bee.style.opacity = '0';
+bee.style.bottom = '-50px';
+document.querySelector('.home').appendChild(bee);
 document.addEventListener('DOMContentLoaded', function () {
   document.body.classList.remove('preload');
 });
@@ -195,8 +196,8 @@ function positionBee() {
   const homeRect = homeSection.getBoundingClientRect();
   const hireRect = hireButton.getBoundingClientRect();
 
-  bee.style.left = `${hireRect.right - homeRect.left - 30}px`; // Closer to the button
-  bee.style.top = `${hireRect.top - homeRect.top - 30}px`; // Closer to the button
+  bee.style.left = `${hireRect.right - homeRect.left - 30}px`;
+  bee.style.top = `${hireRect.top - homeRect.top - 30}px`;
 }
 
 function wiggleBee() {
@@ -212,13 +213,13 @@ function wiggleBee() {
 window.addEventListener('load', () => {
   positionBee();
   setTimeout(() => {
-    bee.style.opacity = '1'; // Make bee visible after 1.7 seconds
-    bee.style.bottom = 'auto'; // Reset bottom to auto
-    setTimeout(wiggleBee, 1000); // Start wiggling after 1 second of appearing
-    setInterval(wiggleBee, 3000); // Wiggle every 3 seconds
+    bee.style.opacity = '1';
+    bee.style.bottom = 'auto';
+    setTimeout(wiggleBee, 1000);
+    setInterval(wiggleBee, 3000);
   }, 1700);
 });
 
-window.addEventListener('resize', positionBee); // Adjust position on resize
+window.addEventListener('resize', positionBee);
 
 // Bee Animation Ends
