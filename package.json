@@ -2,7 +2,7 @@
   "name": "myportfolio",
   "version": "1.0.0",
   "description": "To make your contact form interactive and able to receive messages, follow these steps:",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "node server.js & open http://localhost:5000",
     "start": "node server.js"
