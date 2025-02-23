@@ -157,7 +157,7 @@
 }
 
 /*   === Screen Size 350px or Smaller  ===   */
-@media (max-width: 350px) {
+@media (max-width: 376px) {
   button.contact-btn {
     display: none;
   }
