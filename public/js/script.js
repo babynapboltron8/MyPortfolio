@@ -200,6 +200,14 @@ try {
     serviceBoxesRight.forEach((box) => observer.observe(box));
     serviceBoxesCenter.forEach((box) => observer.observe(box));
     headings.forEach((header) => observer.observe(header));
+
+    const wiggleText = document.getElementById('wiggle-text');
+    if (wiggleText) {
+      wiggleText.classList.add('wiggle');
+      setTimeout(() => {
+        wiggleText.classList.remove('wiggle');
+      }, 2000); // Adjust the duration as needed
+    }
   });
 } catch (error) {
   console.error('Error in Scroll Animation Services Section:', error);
