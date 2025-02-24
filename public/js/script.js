@@ -71,7 +71,7 @@ try {
     '.testimonials-container'
   );
   if (testimonialsContainer) {
-    const owl = new OwlCarousel(testimonialsContainer, {
+    $(testimonialsContainer).owlCarousel({
       loop: true,
       autoplay: true,
       autoplayTimeout: 6000,
