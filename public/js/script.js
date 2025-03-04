@@ -1,5 +1,3 @@
-// Script File
-
 // Home Section Starts
 try {
   const menuBtn = document.querySelector('.menu-btn');
@@ -214,65 +212,6 @@ try {
 }
 // Scroll Animation Services Ends
 
-// Bee Animation
-try {
-  const bee = document.createElement('img');
-  bee.src = 'images/bee.png';
-  bee.style.position = 'absolute';
-  bee.style.width = '40px';
-  bee.style.height = '40px';
-  bee.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
-  bee.style.opacity = '0';
-  bee.style.bottom = '-50px';
-  const homeSection = document.querySelector('.home');
-  if (homeSection) {
-    homeSection.appendChild(bee);
-  } else {
-    console.error('Home section not found for bee animation');
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    document.body.classList.remove('preload');
-  });
-
-  const positionBee = () => {
-    const homeSection = document.querySelector('.home');
-    const hireButton = document.querySelector('.hire-btn');
-    if (homeSection && hireButton) {
-      const homeRect = homeSection.getBoundingClientRect();
-      const hireRect = hireButton.getBoundingClientRect();
-
-      bee.style.left = `${hireRect.right - homeRect.left - 30}px`;
-      bee.style.top = `${hireRect.top - homeRect.top - 30}px`;
-    } else {
-      console.error(
-        'Home section or hire button not found for positioning bee'
-      );
-    }
-  };
-
-  const wiggleBee = () => {
-    bee.style.transform = 'rotate(10deg)';
-    setTimeout(() => {
-      bee.style.transform = 'rotate(-10deg)';
-      setTimeout(() => {
-        bee.style.transform = 'rotate(0deg)';
-      }, 500);
-    }, 500);
-  };
-
-  window.addEventListener('load', () => {
-    positionBee();
-    setTimeout(() => {
-      bee.style.opacity = '1';
-      bee.style.bottom = 'auto';
-      setTimeout(wiggleBee, 1000);
-      setInterval(wiggleBee, 3000);
-    }, 1700);
-  });
-
-  window.addEventListener('resize', positionBee);
-} catch (error) {
-  console.error('Error in Bee Animation Section:', error);
-}
-// Bee Animation Ends
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.remove('preload');
+});
