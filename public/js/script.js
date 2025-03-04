@@ -212,6 +212,22 @@ try {
 }
 // Scroll Animation Services Ends
 
+// Download CV Button
+try {
+  const downloadBtn = document.querySelector('.download-btn a');
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      const url = '/assets/files/BabyNapBoltron-CV.pdf'; // Ensure this path is correct
+      window.open(url, '_blank');
+    });
+  } else {
+    console.error('Download button not found');
+  }
+} catch (error) {
+  console.error('Error in Download CV Button Section:', error);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.remove('preload');
 });
